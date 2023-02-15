@@ -17,12 +17,12 @@ function MewItems() {
 
 export default MewItems;
 
-const NewItemSection = styled.section`
+export const NewItemSection = styled.section`
   width: 76%;
   margin: 0 auto;
   padding-top: 80px;
 `;
-const NewItemTitle = styled.h2`
+export const NewItemTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-type NEW_ITEM_INFO_TYPE = {
+export type NEW_ITEM_INFO_TYPE = {
   name: string;
   price: number;
   modelImage: string;
   itemImage: string;
 };
 
-type NEW_ITEM_WRAP_TYPE = {
+export type NEW_ITEM_WRAP_TYPE = {
   modelImage: string;
   itemImage: string;
 };
@@ -24,7 +24,7 @@ function NewItem({ name, price, modelImage, itemImage }: NEW_ITEM_INFO_TYPE) {
 
 export default NewItem;
 
-const NewItemWrap = styled.article<NEW_ITEM_WRAP_TYPE>`
+export const NewItemWrap = styled.article<NEW_ITEM_WRAP_TYPE>`
   cursor: pointer;
 
   & div {
@@ -43,7 +43,7 @@ const NewItemWrap = styled.article<NEW_ITEM_WRAP_TYPE>`
   }
 `;
 
-const NewItemTitle = styled.h3`
+export const NewItemTitle = styled.h3`
   margin-top: 12px;
   width: 305px;
   height: 44px;
@@ -54,7 +54,7 @@ const NewItemTitle = styled.h3`
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
-const NewItemPrice = styled.span`
+export const NewItemPrice = styled.span`
   color: #858585;
   font-size: 18px;
   font-family: 'Manrope', 'Noto Sans KR', sans-serif;
