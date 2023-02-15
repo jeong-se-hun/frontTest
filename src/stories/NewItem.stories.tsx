@@ -1,16 +1,21 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { NewItemList } from '../components/home/newItems/NewItems';
 import NewItem from '../components/home/newItems/NewItem';
+import { NewItemSection, NewItemTitle, NewItemList } from '../components/home/newItems/NewItems';
 
 export default {
-  title: 'Components/NewItem',
+  title: 'Components/NewItems',
   component: NewItem,
 } as ComponentMeta<typeof NewItem>;
 
 const Template: ComponentStory<typeof NewItem> = args => (
-  <NewItemList>
-    <NewItem {...args} />
-  </NewItemList>
+  <NewItemSection>
+    <NewItemTitle>New Arrivals, New Life</NewItemTitle>
+    <NewItemList>
+      <NewItem {...args} />
+      <NewItem {...args} />
+      <NewItem {...args} />
+    </NewItemList>
+  </NewItemSection>
 );
 
 export const Default = Template.bind({});
