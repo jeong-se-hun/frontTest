@@ -1,4 +1,4 @@
-import NewItem from '@/components/home/newItems/NewItem';
+import NewItem from '@/components/common/ProductItem';
 
 describe('test', () => {
   it('test', () => {
