@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import NewItem from './NewItem';
+import ProductItem from '../../common/ProductItem';
 import { NEW_ITEM_INFO } from '@/constants/home/constants';
 
 function MewItems() {
@@ -8,7 +8,7 @@ function MewItems() {
       <NewItemTitle>New Arrivals, New Life</NewItemTitle>
       <NewItemList>
         {NEW_ITEM_INFO.map(info => (
-          <NewItem key={info.name} {...info} />
+          <ProductItem key={info.name} {...info} />
         ))}
       </NewItemList>
     </NewItemSection>
@@ -33,4 +33,8 @@ export const NewItemList = styled.div`
   display: flex;
   align-content: center;
   justify-content: space-between;
+
+  & article {
+    flex-basis: 25%;
+  }
 `;
