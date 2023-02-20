@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ProductItem from '../../common/ProductItem';
+import ProductItem from '../common/ProductItem';
 import { NEW_ITEM_INFO } from '@/constants/home/constants';
 
 function MewItems() {

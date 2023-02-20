@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Scrollbar } from 'swiper';
 
 import styled from 'styled-components';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
@@ -11,7 +11,7 @@ import ProductItem from '@/components/common/ProductItem';
 
 type ProductSwipeType = {
   categoryName: string;
-  Thumbnail: string;
+  Thumbnail: StaticImageData;
   swipeTitle: string;
   swipeHashtag: string;
   swipeDirection: string; //* "row" or "row-reverse"
@@ -24,7 +24,7 @@ function ProductSwipe(swipeInfo: ProductSwipeType) {
       <ProductTitle>{swipeInfo.categoryName}</ProductTitle>
       <SwipeWrap swipeDirection={swipeInfo.swipeDirection}>
         <Thumbnail>
-          <Image width={720} height={600} src={swipeInfo.Thumbnail} alt={swipeInfo.categoryName + 'thumbnail'} />
+          <Image src={swipeInfo.Thumbnail} alt={swipeInfo.categoryName + 'thumbnail'} />
         </Thumbnail>
         <SwipeBox>
           <SwiperTitle>
