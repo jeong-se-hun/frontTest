@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ProductItem from '../components/common/ProductItem';
-import { NewItemSection, NewItemTitle, NewItemList } from '../components/home/newItems/NewItems';
+import { NewItemSection, NewItemTitle, NewItemList } from '../components/home/NewItems';
 
 export default {
   title: 'Components/NewItems',

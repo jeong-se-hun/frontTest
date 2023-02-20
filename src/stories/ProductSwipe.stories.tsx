@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ProductSwipe from '@/components/home/ProductSwipe/ProductSwipe';
+import ProductSwipe from '@/components/home/ProductSwipe';
 import { SWIPE_JACKET } from '@/constants/home/constants';
 
 export default {
