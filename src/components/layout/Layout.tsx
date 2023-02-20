@@ -1,10 +1,19 @@
-import Head from 'next/head';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
+import Head from "next/head";
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactFragment,
+  ReactPortal,
+} from "react";
 
-import Header from '../header/Header';
+import Header from "../header/Header";
+import RankCarousel from "../rankCarousel/RankCarousel";
 
 type layoutPropsType = {
-  children: ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal;
+  children:
+    | ReactElement<any, string | JSXElementConstructor<any>>
+    | ReactFragment
+    | ReactPortal;
 };
 
 function Layout(props: layoutPropsType) {
@@ -19,6 +28,7 @@ function Layout(props: layoutPropsType) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <RankCarousel />
       <main>{props.children}</main>
     </>
   );
