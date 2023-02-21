@@ -7,15 +7,17 @@ interface CategoryItemProps {
   onClick: () => void;
 }
 
-const CategoryItem = ({ label, select, onClick }: CategoryItemProps) => {
+export default function CategoryItem({
+  label,
+  select,
+  onClick,
+}: CategoryItemProps) {
   return (
     <Item onClick={onClick} select={select}>
       {label}
     </Item>
   );
-};
-
-export default CategoryItem;
+}
 
 const Item = styled.li<{ select: boolean }>`
   display: inline-block;

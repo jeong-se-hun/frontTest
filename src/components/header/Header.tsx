@@ -1,12 +1,12 @@
-import Nav from './Nav';
+import Nav from "./Nav";
 
-import Image from 'next/image';
-import topBanner from '/public/images/banner/topBanner.png';
+import Image from "next/image";
+import topBanner from "/public/images/banner/topBanner.png";
 
 function Header() {
   return (
     <header>
-      <Image src={topBanner} alt={'topBanner'}></Image>
+      <Image src={topBanner} alt={"topBanner"} />
       <Nav />
     </header>
   );

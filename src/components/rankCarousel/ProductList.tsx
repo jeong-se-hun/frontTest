@@ -8,7 +8,7 @@ interface ProductListProps {
   select: string;
 }
 
-const ProductList = ({ select }: ProductListProps) => {
+export default function ProductList({ select }: ProductListProps) {
   const { elastic } = items;
   return (
     <ProductListContainer>
@@ -27,9 +27,7 @@ const ProductList = ({ select }: ProductListProps) => {
       </Carousel>
     </ProductListContainer>
   );
-};
-
-export default ProductList;
+}
 
 const ProductListContainer = styled.ul`
   display: flex;

@@ -7,7 +7,7 @@ type Category = "MEN" | "WOMEN" | "SHOES" | "ACC" | "KIDS";
 
 const CATEGORY_LIST: Array<Category> = ["MEN", "WOMEN", "SHOES", "ACC", "KIDS"];
 
-const CategoryList = () => {
+export default function CategoryList() {
   const [select, setSelect] = React.useState<Category>("MEN");
 
   return (
@@ -25,9 +25,7 @@ const CategoryList = () => {
       <ProductList select={select} />
     </>
   );
-};
-
-export default CategoryList;
+}
 
 const CategoryListContainer = styled.ul`
   display: inline-block;

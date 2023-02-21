@@ -5,26 +5,25 @@ import Image from "next/image";
 import black from "/public/images/carousel/black.png";
 
 interface ProductProps {
-  image: string;
   title: string;
   price: string;
+  image: string;
   hover: string;
 }
 
-const ProductItem = ({ image, title, price, hover }: ProductProps) => {
+export default function ProductItem({
+  title,
+  price,
+  image,
+  hover,
+}: ProductProps) {
   return (
     <ProductContainer>
       <Link href="/">
         <ProductImage>
           <Image src={image} alt="사진" width={304.5} height={406} />
           <Hover>
-            <Image
-              className="hover"
-              src={hover}
-              alt="사진"
-              width={304.5}
-              height={406}
-            />
+            <Image src={hover} alt="사진" width={304.5} height={406} />
           </Hover>
         </ProductImage>
         <Title>{title}</Title>
@@ -37,11 +36,7 @@ const ProductItem = ({ image, title, price, hover }: ProductProps) => {
       </Link>
     </ProductContainer>
   );
-};
-
-export default ProductItem;
-
-const Hover = styled.div``;
+}
 
 const ProductContainer = styled.li`
   width: 304.5px;
@@ -51,16 +46,15 @@ const ProductContainer = styled.li`
 const ProductImage = styled.div`
   width: 100%;
   background-color: #fff;
+`;
 
-  .hover {
-    position: absolute;
-    top: 0%;
-    opacity: 0;
-    transition: opacity 0.3s;
-    // display: none;
-  }
+const Hover = styled.div`
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  transition: opacity 0.3s;
 
-  &:hover .hover {
+  &:hover {
     opacity: 1;
   }
 `;
