@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CategoryList from "./CategoryList";
 
-const RankCarousel = () => {
+export default function RankCarousel() {
   return (
     <CarouselContainer>
       <Title>이번주 디스커버러의 BEST PICK</Title>
@@ -11,9 +11,7 @@ const RankCarousel = () => {
       </CarouselBox>
     </CarouselContainer>
   );
-};
-
-export default RankCarousel;
+}
 
 const CarouselContainer = styled.div`
   margin-top: 80px;
