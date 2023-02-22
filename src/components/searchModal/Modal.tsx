@@ -12,17 +12,23 @@ export default function Modal({ onClose }: ModalProps) {
   return (
     <>
       <ModalContainer>
-        <SearchBox />
+        <Test>
+          <SearchBox />
+          <CloseButton type="button" onClick={onClose} />
+        </Test>
         <ContextBox>
           <WordList />
           <HotItemList />
         </ContextBox>
-        <CloseButton type="button" onClick={onClose} />
       </ModalContainer>
       <ModalBack onClose={onClose} />
     </>
   );
 }
+
+const Test = styled.div`
+  display: flex;
+`;
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -47,9 +53,9 @@ const ContextBox = styled.div`
 
 const CloseButton = styled.button`
   cursor: pointer;
-  position: absolute;
-  top: 55px;
-  right: 420px;
+  position: relative;
+  margin-left: 30px;
+  top: -5px;
   width: 37px;
   height: 37px;
   background: url("https://static.discovery-expedition.com/pc/static/images/common/v2/ico_search_close.png")
