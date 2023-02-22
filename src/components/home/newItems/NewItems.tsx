@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import ProductItem from '../common/ProductItem';
+import ProductItem from '../../common/ProductItem';
 import { NEW_ITEM_INFO } from '@/constants/home/constants';
 
-function MewItems() {
+export default function MewItems() {
   return (
     <NewItemSection>
       <NewItemTitle>New Arrivals, New Life</NewItemTitle>
@@ -14,8 +14,6 @@ function MewItems() {
     </NewItemSection>
   );
 }
-
-export default MewItems;
 
 export const NewItemSection = styled.section`
   width: 76%;

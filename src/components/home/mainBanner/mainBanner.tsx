@@ -16,7 +16,7 @@ import 'swiper/css/autoplay';
 
 import styled from 'styled-components';
 
-function MainBanner() {
+export default function MainBanner() {
   return (
     <MainBannerWrap>
       <Swiper
@@ -56,8 +56,6 @@ function MainBanner() {
     </MainBannerWrap>
   );
 }
-
-export default MainBanner;
 
 const MainBannerWrap = styled.div`
   & img {
