@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import ModalPortal from '@/components/common/ModalPortal';
 import VideoModal from '@/components/home/videoCarousel/VideoModal';
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
+
+import { action } from '@storybook/addon-actions';
 
 type VideosItemProps = {
   title: string;
@@ -15,7 +17,17 @@ type VideosItemProps = {
 export default function VideoItem(VideoInfo: VideosItemProps) {
   const [modalOn, setModalOn] = useState<boolean>(false);
 
+  // const HandleModalClose: MouseEventHandler<HTMLElement> = e => {
+  //   setModalOn(false);
+  //   action('ModalClose Click')(e);
+  // };
+  // const HandleModalOpen: MouseEventHandler<HTMLElement> = e => {
+  //   setModalOn(true);
+  //   action('ModalOpen Click')(e);
+  // };
+
   const HandleModalClose = () => setModalOn(false);
+
   const HandleModalOpen = () => setModalOn(true);
 
   return (

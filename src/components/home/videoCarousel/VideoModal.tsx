@@ -1,10 +1,12 @@
 import Image from 'next/image';
+import { MouseEventHandler } from 'react';
 import ReactPlayer from 'react-player/lazy';
 import styled from 'styled-components';
 
 import x from '/public/images/common/x.png';
 
 type VideoModalProps = {
+  // onClose: MouseEventHandler<HTMLElement>;
   onClose: () => void;
   videoUrl: string;
 };

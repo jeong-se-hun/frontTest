@@ -18,7 +18,6 @@ const ModalPortal = ({ children, selector }: ModalProps) => {
   }, [selector]);
 
   if (!modalOn) return null;
-
   return elementRef.current ? createPortal(children, elementRef.current) : null;
 };
 
