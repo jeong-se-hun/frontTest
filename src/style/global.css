@@ -145,3 +145,117 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'Noto Sans Korean', 'dotum', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+}
+
+input, select, textarea, button {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+label {
+  cursor: default;
+}
+
+.layer-popup-cont h2 {
+  padding-bottom: 29px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.layer-popup.layer-type03 .layer-popup-cont.addressPop > div, li, p, button, span, a, input {
+  font-family: 'Manrope','Noto Sans KR',sans-serif !important;
+}
+
+section {
+  display: block;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+dt {
+  display: block;
+}
+
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+
+caption, legend {
+  display: none;
+  position: absolute;
+  left: -1000000px;
+  overflow: hidden;
+  top: auto;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  clip: rect(0 0 0 0);
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+col {
+  display: table-column;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button span {
+  position: relative;
+}
+
+button, button:active, button:focus {
+  padding: 0;
+}
