@@ -18,7 +18,7 @@ type ProductSwipeType = {
   item: { name: string; price: number; modelImage: string; itemImage: string; textAline: string; imgHeight: number }[];
 };
 
-function ProductSwipe(swipeInfo: ProductSwipeType) {
+export default function ProductSwipe(swipeInfo: ProductSwipeType) {
   return (
     <ProductSwipeSection>
       <ProductTitle>{swipeInfo.categoryName}</ProductTitle>
@@ -46,7 +46,6 @@ function ProductSwipe(swipeInfo: ProductSwipeType) {
   );
 }
 
-export default ProductSwipe;
 export const ProductSwipeSection = styled.section`
   width: 76%;
   margin: 0 auto;

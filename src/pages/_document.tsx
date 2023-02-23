@@ -10,6 +10,8 @@ export default function Document() {
         />
       </Head>
       <body>
+        <div id="modal-root"></div>
+
         <Main />
         <NextScript />
       </body>
