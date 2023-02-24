@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import ProductItem from "./ProductItem";
-import { items } from "../../../public/Item.json";
+import items from "../../../public/data/Item.json";
 import Carousel from "react-elastic-carousel";
 
 interface ProductListProps {
@@ -9,27 +8,20 @@ interface ProductListProps {
 }
 
 export default function ProductList({ select }: ProductListProps) {
-  const { elastic } = items;
   return (
     <ProductListContainer>
       <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
-        {elastic
+        {items
           .filter((item) => item.category === select)
           .map((data, i) => (
-            <ProductItem
-              key={i}
-              title={data.title}
-              image={data.image}
-              price={data.price}
-              hover={data.hover}
-            />
+            <ProductItem key={i} {...data} />
           ))}
       </Carousel>
     </ProductListContainer>
   );
 }
 
-const ProductListContainer = styled.ul`
+export const ProductListContainer = styled.ul`
   display: flex;
   width: 110%;
   position: absolute;
