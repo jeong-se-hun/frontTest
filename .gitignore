@@ -4,13 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+/.vscode
 
 # testing
 /coverage
 
 # next.js
 /.next/
-/out/
 
 # production
 /build
@@ -26,10 +26,8 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env*.local
-
-# vercel
-.vercel
+.env*
+.local
 
 # typescript
 *.tsbuildinfo

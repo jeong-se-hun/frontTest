@@ -1,0 +1,172 @@
+[
+  {
+    "category": "MEN",
+    "title": "픽트로 U 구스다운 경량패딩",
+    "price": "15,9000원",
+    "image": "/images/carousel/outer_2.png",
+    "hover": "/images/carousel/outer.png"
+  },
+  {
+    "category": "MEN",
+    "title": "베이직 풀밴드형 남성 보드숏",
+    "price": "79,000원",
+    "image": "/images/carousel/pant.png",
+    "hover": "/images/carousel/pant_2.png"
+  },
+  {
+    "category": "MEN",
+    "title": "카코포켓 남성 트레이닝 팬츠",
+    "price": "119,000원",
+    "image": "/images/carousel/pant2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "MEN",
+    "title": "스몰로고 반팔티셔츠",
+    "price": "45,000원",
+    "image": "/images/carousel/tshirt.png",
+    "hover": "/images/carousel/tshirt_2.png"
+  },
+  {
+    "category": "MEN",
+    "title": "픽트로 U 구스다운 경량패딩",
+    "price": "15,9000원",
+    "image": "/images/carousel/outer_2.png",
+    "hover": "/images/carousel/outer.png"
+  },
+  {
+    "category": "MEN",
+    "title": "베이직 풀밴드형 남성 보드숏",
+    "price": "79,000원",
+    "image": "/images/carousel/pant.png",
+    "hover": "/images/carousel/pant_2.png"
+  },
+  {
+    "category": "MEN",
+    "title": "카코포켓 남성 트레이닝 팬츠",
+    "price": "119,000원",
+    "image": "/images/carousel/pant2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "MEN",
+    "title": "스몰로고 반팔티셔츠",
+    "price": "45,000원",
+    "image": "/images/carousel/tshirt.png",
+    "hover": "/images/carousel/tshirt_2.png"
+  },
+
+  {
+    "category": "WOMEN",
+    "title": "픽트로 튜브 구스다운 여성 경량패딩",
+    "price": "189,000원",
+    "image": "/images/carousel/G_outer.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "WOMEN",
+    "title": "베이직 풀밴드형 여성 보드숏",
+    "price": "79,000원",
+    "image": "/images/carousel/G_pant.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "WOMEN",
+    "title": "픽트로 튜브 구스다운 여성 경량패딩",
+    "price": "189,000원",
+    "image": "/images/carousel/G_outer2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "WOMEN",
+    "title": "항공점퍼 여성 패딩 자켓",
+    "price": "229,000원",
+    "image": "/images/carousel/G_outer3.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+
+  {
+    "category": "SHOES",
+    "title": "조거 플렉스",
+    "price": "189,000원",
+    "image": "/images/carousel/shoes1.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "SHOES",
+    "title": "조거 플렉스",
+    "price": "79,000원",
+    "image": "/images/carousel/shoes2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "SHOES",
+    "title": "브릭",
+    "price": "189,000원",
+    "image": "/images/carousel/shoes3.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "SHOES",
+    "title": "브릭",
+    "price": "229,000원",
+    "image": "/images/carousel/shoes4.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "ACC",
+    "title": "라이크 에어 시프트 백팩",
+    "price": "189,000원",
+    "image": "/images/carousel/bag1.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "ACC",
+    "title": "라이크 에어 시프트 백팩",
+    "price": "79,000원",
+    "image": "/images/carousel/bag2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "ACC",
+    "title": "에센셜 멀티색",
+    "price": "189,000원",
+    "image": "/images/carousel/bag3.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "ACC",
+    "title": "라이크 에어 백팩",
+    "price": "229,000원",
+    "image": "/images/carousel/bag4.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "KIDS",
+    "title": "에센셜 저학년 책가방",
+    "price": "189,000원",
+    "image": "/images/carousel/kids1.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "KIDS",
+    "title": "브릭 키즈",
+    "price": "79,000원",
+    "image": "/images/carousel/kids2.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "KIDS",
+    "title": "빅버디 고학년 책가방",
+    "price": "189,000원",
+    "image": "/images/carousel/kids3.png",
+    "hover": "/images/carousel/pant2_2.png"
+  },
+  {
+    "category": "KIDS",
+    "title": "에센셜 보조가방",
+    "price": "229,000원",
+    "image": "/images/carousel/kids4.png",
+    "hover": "/images/carousel/pant2_2.png"
+  }
+]

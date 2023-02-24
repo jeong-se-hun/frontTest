@@ -1,11 +1,18 @@
-import Head from 'next/head';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
-import styled from 'styled-components';
-
-import Header from '../header/Header';
+import Head from "next/head";
+import {
+  ReactElement,
+  JSXElementConstructor,
+  ReactFragment,
+  ReactPortal,
+} from "react";
+import styled from "styled-components";
+import Header from "../header/Header";
 
 type layoutPropsType = {
-  children: ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal;
+  children:
+    | ReactElement<any, string | JSXElementConstructor<any>>
+    | ReactFragment
+    | ReactPortal;
 };
 
 function Layout(props: layoutPropsType) {
