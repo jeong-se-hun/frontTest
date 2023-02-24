@@ -23,6 +23,7 @@ const WordItemContainer = styled.li`
   padding: 12px 0;
   border-bottom: 1px solid #eaeaea;
   overflow: hidden;
+  list-style: none;
 
   em {
     display: inline-block;

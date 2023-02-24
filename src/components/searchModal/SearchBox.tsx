@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import placeHolder from "../../../public/placeHolder.json";
+import placeHolder from "../../../public/data/placeHolder.json";
 
 export default function SearchBox() {
   const [index, setIndex] = useState(0);

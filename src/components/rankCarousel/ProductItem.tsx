@@ -16,17 +16,17 @@ export default function ProductItem({ title, price, image, hover }: ProductProps
     <ProductContainer>
       <Link href="/">
         <ProductImage>
-          <Image src={image} alt="사진" width={304.5} height={406} />
+          <Image src={image} alt={title} width={304.5} height={406} />
           <Hover>
-            <Image src={hover} alt="사진" width={304.5} height={406} />
+            <Image src={hover} alt={title} width={304.5} height={406} />
           </Hover>
         </ProductImage>
         <Title>{title}</Title>
         <Price>{price}</Price>
         <Colorchips>
-          <Image src={black} alt="사진" />
-          <Image src={black} alt="사진" />
-          <Image src={black} alt="사진" />
+          <Image src={black} alt="색상" />
+          <Image src={black} alt="색상" />
+          <Image src={black} alt="색상" />
         </Colorchips>
       </Link>
     </ProductContainer>
@@ -36,6 +36,7 @@ export default function ProductItem({ title, price, image, hover }: ProductProps
 const ProductContainer = styled.li`
   width: 304.5px;
   flex: 0 0 auto;
+  list-style: none;
 `;
 
 const ProductImage = styled.div`
