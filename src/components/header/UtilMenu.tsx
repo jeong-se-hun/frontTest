@@ -1,22 +1,22 @@
-import styled from "styled-components";
-import { useState } from "react";
+import styled from 'styled-components';
+import { useState } from 'react';
 
-import Image from "next/image";
-import ico_search from "/public/images/common/ico_search.png";
-import ico_my from "/public/images/common/ico_my.png";
-import ico_bag from "/public/images/common/ico_bag.png";
-import Modal from "../searchModal/Modal";
+import Image from 'next/image';
+import ico_search from '/public/images/common/ico_search.png';
+import ico_my from '/public/images/common/ico_my.png';
+import ico_bag from '/public/images/common/ico_bag.png';
+
+import Modal from '../searchModal/Modal';
+import UtilMyMenuBox from './UtilMyMenuBox';
 
 function UtilMenu() {
   const [modal, setModal] = useState(false);
+  const [myMenuChecked, setMyMenuChecked] = useState(false);
 
-  const onOpen = () => {
-    setModal(true);
-  };
+  const onOpen = () => setModal(true);
+  const onClose = () => setModal(false);
+  const myMenuCheckedToggle = () => setMyMenuChecked(myMenuChecked => !myMenuChecked);
 
-  const onClose = () => {
-    setModal(false);
-  };
   return (
     <>
       <UtilMenuWrap>
@@ -26,9 +26,10 @@ function UtilMenu() {
           </button>
         </UtilItem>
         <UtilItem>
-          <button>
+          <button onClick={myMenuCheckedToggle}>
             <Image src={ico_my} alt="my icon"></Image>
           </button>
+          {myMenuChecked && <UtilMyMenuBox />}
         </UtilItem>
         <UtilItem>
           <button>
@@ -52,6 +53,7 @@ const UtilMenuWrap = styled.ul`
 `;
 
 export const UtilItem = styled.li`
+  position: relative;
   width: 40px;
   height: auto;
 
