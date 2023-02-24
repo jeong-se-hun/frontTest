@@ -27,7 +27,7 @@ export default function CategoryList() {
   );
 }
 
-const CategoryListContainer = styled.ul`
+export const CategoryListContainer = styled.ul`
   display: inline-block;
   position: absolute;
   right: 0;

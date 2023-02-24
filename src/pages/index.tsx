@@ -6,7 +6,7 @@ import {
 } from "@/constants/home/constants";
 import MainBanner from "@/components/home/mainBanner";
 import RankCarousel from "@/components/rankCarousel/RankCarousel";
-import Modal from "@/components/searchModal/Modal";
+import MoreProducts from "@/components/moreProducts/MoreProducts";
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
       <RankCarousel />
       <ProductSwipe {...SWIPE_JACKET}></ProductSwipe>
       <ProductSwipe {...SWIPE_LIGHTWEIGHT_PUFFER}></ProductSwipe>
+      <MoreProducts />
     </>
   );
 }

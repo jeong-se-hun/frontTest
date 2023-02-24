@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HotListItem from "../../../public/HotListItem.json";
+import HotListItem from "../../../public/data/HotListItem.json";
 import HotItem from "./HotItem";
 
 export default function HotItemList() {
@@ -8,12 +8,7 @@ export default function HotItemList() {
       <Title>New Arrivals, New Life</Title>
       <HotItemBox>
         {HotListItem.map((item) => (
-          <HotItem
-            key={item.title}
-            title={item.title}
-            image={item.image}
-            price={item.price}
-          />
+          <HotItem key={item.title} {...item} />
         ))}
       </HotItemBox>
     </HotItemListContainer>

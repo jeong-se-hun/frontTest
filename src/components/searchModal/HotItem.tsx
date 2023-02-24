@@ -13,7 +13,7 @@ export default function HotItem({ title, image, price }: HotItemProps) {
     <HotItemContainer>
       <Link href="/">
         <Thumb>
-          <Image src={image} alt="사진" width={127} height={169} />
+          <Image src={image} alt={title} width={127} height={169} />
         </Thumb>
         <Name>{title}</Name>
         <Price>{price}</Price>

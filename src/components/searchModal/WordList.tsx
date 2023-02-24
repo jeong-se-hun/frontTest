@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import WordListItem from "../../../public/WordListItem.json";
+import WordListItem from "../../../public/data/WordListItem.json";
 import WordItem from "./WordItem";
 
 export default function WordList() {
@@ -7,8 +7,8 @@ export default function WordList() {
     <WordListContainer>
       <Title>조회수 급상승 키워드</Title>
       <WordListBox>
-        {WordListItem.map((item, i) => (
-          <WordItem key={i} id={item.id} title={item.title} tag={item.tag} />
+        {WordListItem.map((item) => (
+          <WordItem key={item.title} {...item} />
         ))}
       </WordListBox>
     </WordListContainer>
@@ -19,7 +19,7 @@ const WordListContainer = styled.div`
   width: 472px;
 `;
 
-const WordListBox = styled.ol`
+export const WordListBox = styled.ol`
   columns: 2;
   column-gap: 32px;
   padding-top: 16px;
