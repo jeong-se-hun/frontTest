@@ -232,5 +232,3 @@ const LoginCsInfo = styled.div`
 const LoginCsInfoStrong = styled.strong`
   font-weight: 700;
 `;
-
-const BorderButton = styled.div``;
