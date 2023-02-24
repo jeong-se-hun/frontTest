@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
-import Image from "next/image";
-import black from "/public/images/carousel/black.png";
+import React from 'react';
+import styled from 'styled-components';
+import Link from 'next/link';
+import Image from 'next/image';
+import black from '/public/images/carousel/black.png';
 
 interface ProductProps {
   title: string;
@@ -11,12 +11,7 @@ interface ProductProps {
   hover: string;
 }
 
-export default function ProductItem({
-  title,
-  price,
-  image,
-  hover,
-}: ProductProps) {
+export default function ProductItem({ title, price, image, hover }: ProductProps) {
   return (
     <ProductContainer>
       <Link href="/">
@@ -73,7 +68,7 @@ const Price = styled.div`
   margin-top: 12px;
   color: #858585;
   font-size: 18px;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
   font-weight: 400;
 `;
 

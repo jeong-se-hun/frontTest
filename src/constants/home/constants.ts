@@ -174,7 +174,7 @@ export const SWIPE_LIGHTWEIGHT_PUFFER = {
 
   item: [
     {
-      name: "디하스 U넥 튜브 구스다운 남성 경량패딩",
+      name: "디하스 U넥 튜브 구스다운 경량패딩",
       price: 199000,
       modelImage: puffer1.src,
       itemImage: puffer1_1.src,
@@ -206,7 +206,7 @@ export const SWIPE_LIGHTWEIGHT_PUFFER = {
       imgHeight: 300,
     },
     {
-      name: "픽토르 U 구스다운 경량패딩",
+      name: "픽토르 U 구스다운 남성 경량패딩",
       price: 159000,
       modelImage: puffer5.src,
       itemImage: puffer5_1.src,
@@ -244,6 +244,63 @@ export const SWIPE_LIGHTWEIGHT_PUFFER = {
       itemImage: puffer9_1.src,
       textAline: "center",
       imgHeight: 300,
+    },
+  ],
+};
+
+// VIDEOS
+import videoThumbnail1 from "/public/images/item/videoThumbnail/videoThumbnail1.jpg";
+import videoThumbnail2 from "/public/images/item/videoThumbnail/videoThumbnail2.jpg";
+import videoThumbnail3 from "/public/images/item/videoThumbnail/videoThumbnail3.jpg";
+import videoThumbnail4 from "/public/images/item/videoThumbnail/videoThumbnail4.jpg";
+import videoThumbnail5 from "/public/images/item/videoThumbnail/videoThumbnail5.jpg";
+import videoThumbnail6 from "/public/images/item/videoThumbnail/videoThumbnail6.jpg";
+
+export const SWIPE_VIDEOS = {
+  categoryName: "디스커버리 영상",
+
+  item: [
+    {
+      title: "READY TO JUMP! 1",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail1,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
+    },
+    {
+      title: "READY TO JUMP! 2",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail2,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
+    },
+    {
+      title: "READY TO JUMP! 3",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail3,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
+    },
+    {
+      title: "READY TO JUMP! 4",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail4,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
+    },
+    {
+      title: "READY TO JUMP! 5",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail5,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
+    },
+    {
+      title: "READY TO JUMP! 6",
+      description:
+        "디스커버리 썸머 스니커즈 콜렉션 영상 디스커버리 썸머 스니커즈 콜렉션 영상",
+      videoThumbnail: videoThumbnail6,
+      videoUrl: "https://youtu.be/HXOmk2yicBY",
     },
   ],
 };

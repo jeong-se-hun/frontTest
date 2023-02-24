@@ -1,5 +1,5 @@
 import ProductItem from "@/components/rankCarousel/ProductItem";
-import { ProductListContainer } from "../components/rankCarousel/ProductList";
+import { ProductListContainer } from "@/components/rankCarousel/ProductList";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
