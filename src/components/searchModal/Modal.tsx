@@ -12,10 +12,10 @@ export default function Modal({ onClose }: ModalProps) {
   return (
     <>
       <ModalContainer>
-        <Test>
+        <SearchContainer>
           <SearchBox />
           <CloseButton type="button" onClick={onClose} />
-        </Test>
+        </SearchContainer>
         <ContextBox>
           <WordList />
           <HotItemList />
@@ -25,10 +25,6 @@ export default function Modal({ onClose }: ModalProps) {
     </>
   );
 }
-
-const Test = styled.div`
-  display: flex;
-`;
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -41,6 +37,13 @@ const ModalContainer = styled.div`
   box-shadow: 0 10px 25px 0 rgb(34 34 34 / 5%);
   border-top: 1px solid #e4e4e4;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const SearchContainer = styled.div`
+  display: flex;
 `;
 
 const ContextBox = styled.div`
