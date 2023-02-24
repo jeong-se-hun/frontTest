@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 *::after,
@@ -139,7 +139,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -178,7 +178,7 @@ button {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: "Noto Sans Korean", "dotum", sans-serif;
+  font-family: 'Noto Sans Korean', 'dotum', sans-serif;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -217,7 +217,7 @@ button,
 span,
 a,
 input {
-  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
 }
 
 section {
@@ -339,7 +339,7 @@ button {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: "Noto Sans Korean", "dotum", sans-serif;
+  font-family: 'Noto Sans Korean', 'dotum', sans-serif;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -378,7 +378,7 @@ button,
 span,
 a,
 input {
-  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif !important;
 }
 
 section {
@@ -464,4 +464,7 @@ button,
 button:active,
 button:focus {
   padding: 0;
+}
+body {
+  padding-bottom: 100px;
 }
