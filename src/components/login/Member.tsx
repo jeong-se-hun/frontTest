@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Coupon from "../common/Coupon";
-import Button2 from "../common/Button2";
+import Button from "../common/Button";
 
 export default function Member() {
   return (
@@ -58,15 +58,15 @@ export default function Member() {
 
         {/* 로그인 버튼 start */}
 
-        <Button2 width="100%" color="#fff" background="black">
+        <Button width="100%" color="#fff" background="black">
           로그인
-        </Button2>
-        <Button2 width="198px" background="#03c75a" color="#fff">
+        </Button>
+        <Button width="198px" background="#03c75a" color="#fff">
           네이버 로그인
-        </Button2>
-        <Button2 width="198px" background="#fee500" color="#191919">
+        </Button>
+        <Button width="198px" background="#fee500" color="#191919">
           카카오 로그인
-        </Button2>
+        </Button>
 
         {/* 로그인 버튼 end */}
 
@@ -115,9 +115,9 @@ export default function Member() {
           {/* 쿠폰창 end */}
         </div>
         {/* 회원가입 버튼 start */}
-        <Button2 background="white" color="#000" border="1px solid #000">
+        <Button background="white" color="#000" border="1px solid #000">
           회원가입
-        </Button2>
+        </Button>
         {/* 회원가입 버튼 end */}
       </DTab02Cont>
       {/* DTab02Cont-회원 전체 탭 */}
@@ -130,39 +130,7 @@ const LoginCnt = styled.div`
   margin: 78px auto 0;
 `;
 
-const TabType05 = styled.ul`
-  overflow: hidden;
-  background: #fff;
-  z-index: 1;
-`;
-
-const DTab02Select = styled.li`
-  float: left;
-  width: 50%;
-`;
-
-const DTab02SelectA = styled.a`
-  border-bottom: 1px solid #000;
-  font-weight: 700;
-
-  display: flex;
-  height: 62px;
-  border-bottom: 1px solid #ddd;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  word-break: inherit;
-  word-wrap: break-word;
-  white-space: normal;
-`;
-
 const DTab02Cont = styled.div`
-  margin-top: 30px;
-`;
-
-const DTab02Cont2 = styled.div`
   margin-top: 30px;
 `;
 
@@ -228,11 +196,6 @@ const FindA = styled.a`
   font-size: 13px;
 `;
 
-const MemberBenefit = styled.div`
-  margin-top: 20px;
-  border-top: 2px solid #000;
-`;
-
 const TitleH3 = styled.h3`
   padding: 20px 0;
   text-align: center;
@@ -260,43 +223,4 @@ const ListBfUl = styled.ul`
   display: flex;
   justify-content: space-between;
   background: #f6f6f6;
-`;
-
-const ListBfUlLi = styled.li`
-  margin-left: 0;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding: 40px 0;
-  border-bottom: 1px solid #eaebef;
-`;
-
-/* 비회원 input */
-const PhoneWrap = styled.div`
-  margin-top: 5px;
-  font-size: 0;
-`;
-const PhoneWrapSpan = styled.span`
-  display: inline-block;
-  position: relative;
-  width: 10px;
-  height: 40px;
-  font-size: 0;
-  line-height: 0;
-  vertical-align: top;
-`;
-
-const LoginCsInfo = styled.div`
-  margin: 28px 0;
-  padding: 17px;
-  background-color: #f6f6f6;
-  font-size: 12px;
-  line-height: 19px;
-  text-align: center;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
-`;
-
-const LoginCsInfoStrong = styled.strong`
-  font-weight: 700;
 `;

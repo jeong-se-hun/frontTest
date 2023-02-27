@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Coupon from "../common/Coupon";
-import Button2 from "../common/Button2";
+import Button from "../common/Button";
 
 export default function NonMember() {
   return (
@@ -74,7 +74,7 @@ export default function NonMember() {
         {/* 비회원 form end */}
 
         {/* 주문조회 버튼 start */}
-        <Button2>주문조회</Button2>
+        <Button>주문조회</Button>
         {/* 주문조회 버튼 end */}
 
         {/* login-btn-link start */}
@@ -134,9 +134,9 @@ export default function NonMember() {
         {/* 쿠폰창 end */}
         {/* </MemberBenefit> */}
         <div className="border-button">
-          <Button2 background="white" color="#000" border="1px solid #000">
+          <Button background="white" color="#000" border="1px solid #000">
             회원가입
-          </Button2>
+          </Button>
         </div>
       </DTab02Cont2>
     </LoginCnt>
@@ -146,38 +146,6 @@ export default function NonMember() {
 const LoginCnt = styled.div`
   width: 400px;
   margin: 78px auto 0;
-`;
-
-const TabType05 = styled.ul`
-  overflow: hidden;
-  background: #fff;
-  z-index: 1;
-`;
-
-const DTab02Select = styled.li`
-  float: left;
-  width: 50%;
-`;
-
-const DTab02SelectA = styled.a`
-  border-bottom: 1px solid #000;
-  font-weight: 700;
-
-  display: flex;
-  height: 62px;
-  border-bottom: 1px solid #ddd;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  word-break: inherit;
-  word-wrap: break-word;
-  white-space: normal;
-`;
-
-const DTab02Cont = styled.div`
-  margin-top: 30px;
 `;
 
 const DTab02Cont2 = styled.div`
@@ -199,37 +167,6 @@ const InputStyle01 = styled.input`
   vertical-align: middle;
 `;
 
-const LoginCheckId = styled.p`
-  margin-top: 17px;
-`;
-
-const CheckSkin = styled.span`
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  overflow: hidden;
-`;
-
-const CheckSkinSpan = styled.span`
-  display: block;
-  width: 15px;
-  height: 15px;
-  font-size: 0;
-  color: transparent;
-  background: url(../images/common/checkbox2.png) no-repeat left top;
-  z-index: 3;
-`;
-
-const ErrorMsg = styled.p`
-  margin-top: 8px;
-  font-size: 13px;
-  color: #ff3600;
-  text-align: left;
-`;
-
-/* 로그인 버튼 */
-
 /* login-btn-link */
 const LoginBtnLnk = styled.div`
   margin: 28px 0;
@@ -244,11 +181,6 @@ const FindA = styled.a`
   position: relative;
   padding: 0 15px;
   font-size: 13px;
-`;
-
-const MemberBenefit = styled.div`
-  margin-top: 20px;
-  border-top: 2px solid #000;
 `;
 
 const TitleH3 = styled.h3`
@@ -266,28 +198,10 @@ const Strong = styled.strong`
 `;
 
 /* 쿠폰창 */
-const ListBf = styled.div`
-  // padding: 25px 27px;
-  // background-color: #f0f0f0;
-  // display: flex;
-
-  // justify-content: space-between;
-`;
-
 const ListBfUl = styled.ul`
   display: flex;
   justify-content: space-between;
   background: #f6f6f6;
-`;
-
-const ListBfUlLi = styled.li`
-  margin-left: 0;
-  flex: 0 0 auto;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding: 40px 0;
-  border-bottom: 1px solid #eaebef;
 `;
 
 /* 비회원 input */

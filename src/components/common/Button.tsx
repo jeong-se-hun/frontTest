@@ -1,31 +1,36 @@
 import styled from "styled-components";
 
 type ButtonType = {
-  color: string, 
-  background: string,
-  children:string
+  color?: string;
+  background?: string;
+  width?: string;
+  height?: string;
+  border?: string;
+  children?: string;
+};
+
+interface ButtonProps extends ButtonType {}
+
+function Button({ children, ...rest }: ButtonProps) {
+  return <StyledButton {...rest}>{children}</StyledButton>;
 }
 
-const StyledButton = styled.button`
-  /* 공통 스타일 */
-  display: inline-block;
-  min-width: 220px;
-  height: 45px;
-  padding: 0 20px;
-  border: 1px solid #000;
-  background: #000;
+const StyledButton = styled.button<ButtonType>`
   color: #fff;
-  line-height: 45px;
-  vertical-align: top;
-  `
+  background: #000;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  border: 1px solid #000;
+  border: none;
+  font-size: 14px;
 
-function Button({color, background, children}:ButtonType)  {
-  return <StyledButton style={{color: `${color}`, background: `${background}`}}>{children}</StyledButton>;
-}
-
-const ButtonStyle = styled.button<{color:string, background:string}>`
-  color: ${props => props.color},
-  backgroundcolor: ${props => props.background}
-  `
+  color: ${(props) => props.color};
+  background: ${(props) => props.background};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  border: ${(props) => props.border};
+`;
 
 export default Button;

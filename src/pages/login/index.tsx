@@ -1,11 +1,11 @@
-import Login from '@/components/login/Login';
-import LoginForm from '@/components/login/LoginForm';
+import Headtitle from "@/components/common/Headtitle";
+import LoginForm from "@/components/login/LoginForm";
 
 export default function Home() {
   return (
     <>
-      <Login/>
-      <LoginForm/>
+      <Headtitle title={"로그인"} smallTitle={"로그인"} />
+      <LoginForm />
     </>
   );
 }
