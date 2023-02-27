@@ -74,7 +74,9 @@ export default function NonMember() {
         {/* 비회원 form end */}
 
         {/* 주문조회 버튼 start */}
-        <Button>주문조회</Button>
+        <ButtonSpace>
+          <Button>주문조회</Button>
+        </ButtonSpace>
         {/* 주문조회 버튼 end */}
 
         {/* login-btn-link start */}
@@ -133,11 +135,11 @@ export default function NonMember() {
         {/* </ListBf> */}
         {/* 쿠폰창 end */}
         {/* </MemberBenefit> */}
-        <div className="border-button">
+        <ButtonSpace className="border-button">
           <Button background="white" color="#000" border="1px solid #000">
             회원가입
           </Button>
-        </div>
+        </ButtonSpace>
       </DTab02Cont2>
     </LoginCnt>
   );
@@ -165,6 +167,11 @@ const InputStyle01 = styled.input`
   color: #000;
   border: 1px solid #ddd;
   vertical-align: middle;
+`;
+
+/* 버튼 여백 */
+const ButtonSpace = styled.div`
+  margin-top: 30px;
 `;
 
 /* login-btn-link */

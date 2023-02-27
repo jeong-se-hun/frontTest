@@ -44,29 +44,31 @@ export default function Member() {
             value="" /* validate="required;" validatetext="비밀번호" */
           />
 
-          <LoginCheckId>
-            <CheckSkin>
-              <input type="checkbox" id="chkSaveId" name="chkSaveId" />
-              <CheckSkinSpan>선택</CheckSkinSpan>
-            </CheckSkin>
-            <label /* for="chkSaveId" */>아이디 저장</label>
-          </LoginCheckId>
+          {/* 아이디 저장 체크박스 */}
+          <StyledLabel>
+            <StyledInput type="checkbox" />
+            <StyledP>아이디 저장</StyledP>
+          </StyledLabel>
 
           <ErrorMsg></ErrorMsg>
         </form>
         {/* 회원-아이디 & 비밀번호 input end */}
 
         {/* 로그인 버튼 start */}
+        <ButtonSpace>
+          <Button width="100%" color="#fff" background="black">
+            로그인
+          </Button>
+        </ButtonSpace>
 
-        <Button width="100%" color="#fff" background="black">
-          로그인
-        </Button>
-        <Button width="198px" background="#03c75a" color="#fff">
-          네이버 로그인
-        </Button>
-        <Button width="198px" background="#fee500" color="#191919">
-          카카오 로그인
-        </Button>
+        <ButtonSpaceHalf>
+          <Button width="198px" background="#03c75a" color="#fff">
+            네이버 로그인
+          </Button>
+          <Button width="198px" background="#fee500" color="#191919">
+            카카오 로그인
+          </Button>
+        </ButtonSpaceHalf>
 
         {/* 로그인 버튼 end */}
 
@@ -115,9 +117,11 @@ export default function Member() {
           {/* 쿠폰창 end */}
         </div>
         {/* 회원가입 버튼 start */}
-        <Button background="white" color="#000" border="1px solid #000">
-          회원가입
-        </Button>
+        <ButtonSpace>
+          <Button background="white" color="#000" border="1px solid #000">
+            회원가입
+          </Button>
+        </ButtonSpace>
         {/* 회원가입 버튼 end */}
       </DTab02Cont>
       {/* DTab02Cont-회원 전체 탭 */}
@@ -128,6 +132,14 @@ export default function Member() {
 const LoginCnt = styled.div`
   width: 400px;
   margin: 78px auto 0;
+`;
+
+const ButtonSpace = styled.div`
+  margin-top: 30px;
+`;
+
+const ButtonSpaceHalf = styled.div`
+  margin-top: 5px;
 `;
 
 const DTab02Cont = styled.div`
@@ -149,26 +161,20 @@ const InputStyle01 = styled.input`
   vertical-align: middle;
 `;
 
-const LoginCheckId = styled.p`
-  margin-top: 17px;
+/* 아이디 저장 체크박스 */
+const StyledLabel = styled.label`
+  display: flex;
+  align-items: center;
+  user-select: none;
 `;
 
-const CheckSkin = styled.span`
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  overflow: hidden;
+const StyledInput = styled.input`
+  margin-top: 10px;
 `;
 
-const CheckSkinSpan = styled.span`
-  display: block;
-  width: 15px;
-  height: 15px;
-  font-size: 0;
-  color: transparent;
-  background: url(../images/common/checkbox2.png) no-repeat left top;
-  z-index: 3;
+const StyledP = styled.p`
+  margin-top: 10px;
+  margin-left: 0.25rem;
 `;
 
 const ErrorMsg = styled.p`
@@ -178,9 +184,6 @@ const ErrorMsg = styled.p`
   text-align: left;
 `;
 
-/* 로그인 버튼 */
-
-/* login-btn-link */
 const LoginBtnLnk = styled.div`
   margin: 28px 0;
   text-align: center;
