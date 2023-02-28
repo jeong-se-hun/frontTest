@@ -10,13 +10,13 @@ interface ProductListProps {
 export default function ProductList({ select }: ProductListProps) {
   return (
     <ProductListContainer>
-      <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
+      {/* <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
         {items
           .filter((item) => item.category === select)
           .map((data, i) => (
             <ProductItem key={i} {...data} />
           ))}
-      </Carousel>
+      </Carousel> */}
     </ProductListContainer>
   );
 }
