@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import ProductItem from "./ProductItem";
-import items from "../../../public/data/Item.json";
-import Carousel from "react-elastic-carousel";
+import styled from 'styled-components';
+import ProductItem from './ProductItem';
+import items from '../../../public/data/Item.json';
+import Carousel from 'react-elastic-carousel';
 
 interface ProductListProps {
   select: string;
@@ -10,9 +10,10 @@ interface ProductListProps {
 export default function ProductList({ select }: ProductListProps) {
   return (
     <ProductListContainer>
+      {/* @ts-ignore */}
       <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
         {items
-          .filter((item) => item.category === select)
+          .filter(item => item.category === select)
           .map((data, i) => (
             <ProductItem key={i} {...data} />
           ))}

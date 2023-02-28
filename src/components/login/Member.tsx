@@ -1,18 +1,16 @@
-import styled from "styled-components";
-import Coupon from "../common/Coupon";
-import Button2 from "../common/Button2";
+import styled from 'styled-components';
+import Coupon from '../common/Coupon';
+import Button2 from '../common/Button2';
+import NaverLogin from './NaverLogin';
+import KakaoLogin from './KakaoLogin';
 
 export default function Member() {
   return (
     <LoginCnt>
-      <DTab02Cont style={{ display: "block" }}>
+      <DTab02Cont style={{ display: 'block' }}>
         {/* 회원 form start */}
         <form id="loginForm" method="post">
-          <input
-            type="hidden"
-            name="_csrf"
-            value="57f826b6-5e22-4804-be28-872cc93de46d"
-          />
+          <input type="hidden" name="_csrf" value="57f826b6-5e22-4804-be28-872cc93de46d" />
           <input type="hidden" name="accessToken" id="accessToken" value="" />
           <input
             type="hidden"
@@ -61,12 +59,10 @@ export default function Member() {
         <Button2 width="100%" color="#fff" background="black">
           로그인
         </Button2>
-        <Button2 width="198px" background="#03c75a" color="#fff">
-          네이버 로그인
-        </Button2>
-        <Button2 width="198px" background="#fee500" color="#191919">
-          카카오 로그인
-        </Button2>
+        <SocialBox>
+          <NaverLogin />
+          <KakaoLogin />
+        </SocialBox>
 
         {/* 로그인 버튼 end */}
 
@@ -102,14 +98,8 @@ export default function Member() {
           <ListBf>
             <ListBfUl>
               <Coupon></Coupon>
-              <Coupon
-                amount={"10 %"}
-                title={"첫 구매완료 시\n 감사쿠폰 지급"}
-              ></Coupon>
-              <Coupon
-                amount={"6 %"}
-                title={"구매할 때마다\n 최대 6% 적립"}
-              ></Coupon>
+              <Coupon amount={'10 %'} title={'첫 구매완료 시\n 감사쿠폰 지급'}></Coupon>
+              <Coupon amount={'6 %'} title={'구매할 때마다\n 최대 6% 적립'}></Coupon>
             </ListBfUl>
           </ListBf>
           {/* 쿠폰창 end */}
@@ -294,9 +284,16 @@ const LoginCsInfo = styled.div`
   font-size: 12px;
   line-height: 19px;
   text-align: center;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
 `;
 
 const LoginCsInfoStrong = styled.strong`
   font-weight: 700;
+`;
+
+const SocialBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
 `;
