@@ -1,4 +1,4 @@
-import items from "../../../public/data/Item.json";
+import items from "../../../public/data/Items.json";
 import ProductItem from "../rankCarousel/ProductItem";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
