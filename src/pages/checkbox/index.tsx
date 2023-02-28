@@ -1,9 +1,11 @@
 import CheckBox from "@/components/checkBox/CheckBox";
+import CheckBox2 from "@/components/checkBox/CheckBox2";
 
 export default function Home() {
   return (
     <>
-      <CheckBox id={0} checked={false} label={""} props={""} />
+      <CheckBox />
+      <CheckBox2 />
     </>
   );
 }
