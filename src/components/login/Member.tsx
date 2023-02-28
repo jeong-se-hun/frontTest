@@ -1,8 +1,91 @@
 import styled from "styled-components";
 import Coupon from "../common/Coupon";
 import Button from "../common/Button";
+import { kakaoInit } from "./kakaoInit";
+import Router from "next/router";
+import { useContext, useState } from "react";
 
 export default function Member() {
+  // const { setUser } = useContext(MemberContext);
+  // const kakaoLogin = async () => {
+  //   // 카카오 초기화
+  //   const kakao = kakaoInit();
+
+  //   // 카카오 로그인 구현
+  //   kakao.Auth.login({
+  //     success: () => {
+  //       kakao.API.request({
+  //         url: "/v2/user/me", // 사용자 정보 가져오기
+  //         success: (res: any) => {
+  //           // 로그인 성공할 경우 정보 확인 후 /kakao 페이지로 push
+  //           console.log(res);
+  //           Router.push({
+  //             pathname: "/",
+  //             query: {
+  //               nickName: res.properties.nickname,
+  //               profileImage: res.properties.profile_image,
+  //             },
+  //           });
+
+  //           console.log(kakao.Auth.getAccessToken());
+  //         },
+  //         fail: (error: any) => {
+  //           console.log(error);
+  //         },
+  //       });
+  //     },
+  //     fail: (error: any) => {
+  //       console.log(error);
+  //     },
+  //   });
+  // };
+
+  type testttt = {
+    profileImg: string;
+    nickname: string;
+  };
+
+  const [user, setUser] = useState<testttt | null>(null);
+  const [isLogin, setIsLogin] = useState(false);
+
+  const kakaoLogin = async () => {
+    const kakao = kakaoInit();
+
+    await kakao.Auth.login({
+      success(res: any) {
+        console.log("token", res);
+        kakao.Auth.setAccessToken(res.access_token);
+        console.log("카카오 로그인 성공");
+
+        kakao.API.request({
+          url: "/v2/user/me",
+          success(res: any) {
+            console.log("카카오 인가 요청 성공");
+            const kakaoAccount = res.kakao_account;
+            console.log(kakaoAccount);
+            setUser({
+              profileImg: kakaoAccount.profile.profile_image_url,
+              nickname: kakaoAccount.profile.nickname,
+            });
+            localStorage.setItem(
+              "profileImg",
+              kakaoAccount.profile.profile_image_url
+            );
+            localStorage.setItem("nickname", kakaoAccount.profile.nickname);
+            setIsLogin(true);
+            Router.push("/");
+          },
+          fail(error: any) {
+            console.log(error);
+          },
+        });
+      },
+      fail(error: any) {
+        console.log(error);
+      },
+    });
+  };
+
   return (
     <LoginCnt>
       <DTab02Cont style={{ display: "block" }}>
@@ -65,7 +148,12 @@ export default function Member() {
           <Button width="198px" background="#03c75a" color="#fff">
             네이버 로그인
           </Button>
-          <Button width="198px" background="#fee500" color="#191919">
+          <Button
+            width="198px"
+            background="#fee500"
+            color="#191919"
+            onClick={kakaoLogin}
+          >
             카카오 로그인
           </Button>
         </ButtonSpaceHalf>

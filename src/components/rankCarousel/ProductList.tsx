@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProductItem from "./ProductItem";
-import items from "../../../public/data/Item.json";
+import items from "../../../public/data/Items.json";
 import Carousel from "react-elastic-carousel";
 
 interface ProductListProps {

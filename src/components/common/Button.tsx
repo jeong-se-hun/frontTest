@@ -7,6 +7,7 @@ type ButtonType = {
   height?: string;
   border?: string;
   children?: string;
+  onClick?: () => void;
 };
 
 interface ButtonProps extends ButtonType {}
