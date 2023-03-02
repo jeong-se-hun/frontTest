@@ -16,8 +16,8 @@ export default function MoreProductList() {
   const [productData, setProductData] = useState<Test[]>([]);
 
   useEffect(() => {
-    let addProduct = productData.concat(items.slice(8 * cnt, 8 * (cnt + 1)));
-    setProductData(addProduct);
+    // let addProduct = productData.concat(items.slice(8 * cnt, 8 * (cnt + 1)));
+    // setProductData(addProduct);
   }, [cnt]);
 
   return (

@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import Coupon from "../common/Coupon";
+import CheckBox from "../checkBox/CheckBox";
 
 type SignupFormTyle = {
   name: string;
@@ -195,142 +196,7 @@ function SignupForm() {
         {/* =====필수정보 end===== */}
 
         {/* =====이용약관 start===== */}
-        <section className="sect receive" style={{ display: "block" }}>
-          <Togbox id="termToggle">
-            <Hbox>
-              <CheckSkin>
-                <input
-                  type="checkbox"
-                  id="chk_receive_1"
-                  data-gtm-form-interact-field-id="0"
-                />
-                {/*   <SelectSpan>선택</SelectSpan> */}
-              </CheckSkin>
-              <HboxLabel htmlFor="chk_receive_1">
-                이용약관 및 개인정보 수집 전체 동의
-              </HboxLabel>
-              <small
-                id="chkReciveError"
-                style={{ display: "none", color: "red", fontSize: "13px" }}
-              >
-                필수약관에 동의를 체크해 주세요.
-              </small>
-              <BtnOpen
-                type="button"
-                className="btn-open d_toggle_select"
-                id="termBtn"
-              >
-                <span>Open</span>
-              </BtnOpen>
-            </Hbox>
-            <CboxDtoggleCont>
-              <ul className="list">
-                <TogboxList>
-                  <TitAtree>이용약관</TitAtree>
-                  <AgreeWrap>
-                    <AgreeWrapItems>
-                      <BoxItems>
-                        <Item>
-                          <CheckSkin>
-                            <input
-                              type="checkbox"
-                              name="onlineSiteUsefStplat"
-                              id="onlineSiteUsefStplat"
-                              value="Y"
-                            />
-                          </CheckSkin>
-                          <GrayLabel htmlFor="onlineSiteUsefStplat">
-                            (필수) 이용약관에 대한 동의
-                          </GrayLabel>
-                        </Item>
-                      </BoxItems>
-                      <a href="javascript:;" className="linkASt">
-                        <ContentSpan>내용보기</ContentSpan>
-                      </a>
-                    </AgreeWrapItems>
-
-                    <AgreeItems>
-                      <BoxItems>
-                        <Item>
-                          <CheckSkin>
-                            <input
-                              type="checkbox"
-                              name="psnlInfoColctUsefAgr"
-                              id="psnlInfoColctUsefAgr"
-                              value="Y"
-                            />
-                          </CheckSkin>
-                          <GrayLabel htmlFor="onlineSiteUsefStplat">
-                            (필수) 개인정보 수집 및 이용에 대한 동의
-                          </GrayLabel>
-                        </Item>
-                      </BoxItems>
-                      <a href="javascript:;" className="linkAS">
-                        <ContentSpan>내용보기</ContentSpan>
-                      </a>
-                    </AgreeItems>
-
-                    <AgreeItems>
-                      <BoxItems>
-                        <Item>
-                          <CheckSkin>
-                            <input
-                              type="checkbox"
-                              name="psnlInfoUseAgr"
-                              id="psnlInfoUseAgr"
-                              value="Y"
-                            />
-                          </CheckSkin>
-                          <GrayLabel htmlFor="psnlInfoUseAgr">
-                            (필수) 본인인증을 위한 개인정보 이용 동의
-                          </GrayLabel>
-                        </Item>
-                      </BoxItems>
-                      <a href="javascript:;" className="linkASt">
-                        <ContentSpan>내용보기</ContentSpan>
-                      </a>
-                    </AgreeItems>
-                  </AgreeWrap>
-                </TogboxList>
-
-                <TogboxList>
-                  <TitAtree>마케팅정보 수신</TitAtree>
-                  <BoxItems>
-                    <Item>
-                      <CheckSkin>
-                        <input
-                          type="checkbox"
-                          name="emailRecptnAgrYn"
-                          id="emailRecptnAgrYn"
-                          value="Y"
-                        />
-                      </CheckSkin>
-                      <GrayLabel htmlFor="emailRecptnAgrYn">
-                        (선택) E-mail 수신 동의
-                      </GrayLabel>
-                    </Item>
-                    <Item>
-                      <CheckSkin>
-                        <input
-                          type="checkbox"
-                          name="smsRecptnAgrYn"
-                          id="smsRecptnAgrYn"
-                          value="Y"
-                        />
-                      </CheckSkin>
-                      <GrayLabel htmlFor="smsRecptnAgrYn">
-                        (선택) SNS (알림톡) 수신 동의
-                      </GrayLabel>
-                    </Item>
-                  </BoxItems>
-                  <a href="javascript:;" className="linkASt">
-                    <ContentSpan>내용보기</ContentSpan>
-                  </a>
-                </TogboxList>
-              </ul>
-            </CboxDtoggleCont>
-          </Togbox>
-        </section>
+        <CheckBox></CheckBox>
         {/* =====이용약관 end===== */}
       </form>
       {/* =====form end===== */}
