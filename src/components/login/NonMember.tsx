@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import Coupon from "../common/Coupon";
-import Button from "../common/Button";
+import styled from 'styled-components';
+import Coupon from '../common/Coupon';
+import Button from '../common/Button';
 
 export default function NonMember() {
   return (
     <LoginCnt>
-      <DTab02Cont2 className="d_tab02_cont on" style={{ display: "block" }}>
+      <DTab02Cont2 className="d_tab02_cont on" style={{ display: 'block' }}>
         {/* 비회원 form start */}
         <form id="guestForm" method="post">
           {/* 비회원 input start */}
@@ -35,7 +35,7 @@ export default function NonMember() {
 
           <PhoneWrap>
             <InputStyle01
-              style={{ width: "126px" }}
+              style={{ width: '126px' }}
               type="text"
               className="input-style01"
               title="연락처 첫번째 입력창"
@@ -45,7 +45,7 @@ export default function NonMember() {
             />
             <PhoneWrapSpan className="hyphen">-</PhoneWrapSpan>
             <InputStyle01
-              style={{ width: "127px" }}
+              style={{ width: '127px' }}
               type="text"
               className="input-style01"
               title="연락처 가운데 입력창"
@@ -54,7 +54,7 @@ export default function NonMember() {
             />
             <PhoneWrapSpan className="hyphen">-</PhoneWrapSpan>
             <InputStyle01
-              style={{ width: "127px" }}
+              style={{ width: '127px' }}
               type="text"
               className="input-style01"
               title="연락처 마지막 입력창"
@@ -124,12 +124,12 @@ export default function NonMember() {
         <ListBfUl>
           <Coupon></Coupon>
           <Coupon
-            amount={"10 %"}
-            title={"첫 구매완료 시\n 감사쿠폰 지급"}
+            amount={'10 %'}
+            title={'첫 구매완료 시\n 감사쿠폰 지급'}
           ></Coupon>
           <Coupon
-            amount={"6 %"}
-            title={"구매할 때마다\n 최대 6% 적립"}
+            amount={'6 %'}
+            title={'구매할 때마다\n 최대 6% 적립'}
           ></Coupon>
         </ListBfUl>
         {/* </ListBf> */}
@@ -233,7 +233,7 @@ const LoginCsInfo = styled.div`
   font-size: 12px;
   line-height: 19px;
   text-align: center;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
 `;
 
 const LoginCsInfoStrong = styled.strong`

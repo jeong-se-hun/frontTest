@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import Coupon from "../common/Coupon";
-import Button from "../common/Button";
+import styled from 'styled-components';
+import Coupon from '../common/Coupon';
+import Button from '../common/Button';
+import KakaoLogin from '../login/KakaoLogin';
 
 export default function Member() {
   return (
     <LoginCnt>
-      <DTab02Cont style={{ display: "block" }}>
+      <DTab02Cont style={{ display: 'block' }}>
         {/* 회원 form start */}
         <form id="loginForm" method="post">
           <input
@@ -65,9 +66,8 @@ export default function Member() {
           <Button width="198px" background="#03c75a" color="#fff">
             네이버 로그인
           </Button>
-          <Button width="198px" background="#fee500" color="#191919">
-            카카오 로그인
-          </Button>
+
+          <KakaoLogin />
         </ButtonSpaceHalf>
 
         {/* 로그인 버튼 end */}
@@ -105,12 +105,12 @@ export default function Member() {
             <ListBfUl>
               <Coupon></Coupon>
               <Coupon
-                amount={"10 %"}
-                title={"첫 구매완료 시\n 감사쿠폰 지급"}
+                amount={'10 %'}
+                title={'첫 구매완료 시\n 감사쿠폰 지급'}
               ></Coupon>
               <Coupon
-                amount={"6 %"}
-                title={"구매할 때마다\n 최대 6% 적립"}
+                amount={'6 %'}
+                title={'구매할 때마다\n 최대 6% 적립'}
               ></Coupon>
             </ListBfUl>
           </ListBf>

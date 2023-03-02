@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export type ProductItemType = {
   textAline?: string;
@@ -21,7 +21,7 @@ function ProductItem({
   modelImage,
   itemImage,
   imgHeight,
-  textAline = "left",
+  textAline = 'left',
 }: ProductItemType) {
   return (
     <ProductItemWrap
@@ -78,7 +78,7 @@ export const ProductItemPrice = styled.span<{ textAline?: string }>`
   display: block;
   color: #858585;
   font-size: 18px;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
   font-weight: 400;
   text-align: ${(props) => props.textAline};
   margin-top: 12px;

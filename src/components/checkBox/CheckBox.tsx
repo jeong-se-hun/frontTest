@@ -1,5 +1,5 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useState } from 'react';
+import styled from 'styled-components';
 
 type DataType = {
   id: number;
@@ -8,14 +8,14 @@ type DataType = {
 
 export default function CheckBox(): JSX.Element {
   const data: DataType[] = [
-    { id: 0, title: "(필수) 이용약관에 대한 동의" },
-    { id: 1, title: "(필수) 개인정보 수집 및 이용에 대한 동의" },
-    { id: 2, title: "(필수) 본인인증을 위한 개인정보 이용 동의" },
+    { id: 0, title: '(필수) 이용약관에 대한 동의' },
+    { id: 1, title: '(필수) 개인정보 수집 및 이용에 대한 동의' },
+    { id: 2, title: '(필수) 본인인증을 위한 개인정보 이용 동의' },
   ];
 
   const selectData: DataType[] = [
-    { id: 3, title: "(선택) E-mail 수신 동의" },
-    { id: 4, title: "(선택) SNS (알림톡) 수신 동의" },
+    { id: 3, title: '(선택) E-mail 수신 동의' },
+    { id: 4, title: '(선택) SNS (알림톡) 수신 동의' },
   ];
 
   // 체크된 아이템을 담을 배열

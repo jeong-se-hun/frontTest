@@ -1,7 +1,7 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
-import styled from "styled-components";
-import Coupon from "../common/Coupon";
-import CheckBox from "../checkBox/CheckBox";
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
+import styled from 'styled-components';
+import Coupon from '../common/Coupon';
+import CheckBox from '../checkBox/CheckBox';
 
 type SignupFormTyle = {
   name: string;
@@ -26,18 +26,18 @@ function SignupForm() {
 
           <Coupon></Coupon>
           <Coupon
-            amount={"10 %"}
-            title={"첫 구매완료 시\n 감사쿠폰 지급"}
+            amount={'10 %'}
+            title={'첫 구매완료 시\n 감사쿠폰 지급'}
           ></Coupon>
           <Coupon
-            amount={"6 %"}
-            title={"구매할 때마다\n 최대 6% 적립"}
+            amount={'6 %'}
+            title={'구매할 때마다\n 최대 6% 적립'}
           ></Coupon>
         </Benefit>
         <Family>
           <FamilyDt>F&amp;F Family Brand</FamilyDt>
           <FamilyDd>
-            {" "}
+            {' '}
             Discovery Expedition · MLB · MLB KIDS · COLLECTED
           </FamilyDd>
         </Family>
@@ -79,7 +79,7 @@ function SignupForm() {
           <Table summary="개인정보입력">
             <caption>개인정보입력</caption>
             <colgroup>
-              <col style={{ width: "200px" }} />
+              <col style={{ width: '200px' }} />
             </colgroup>
             <Tbody>
               <Tr>
@@ -93,7 +93,7 @@ function SignupForm() {
                     id="mbrId"
                     name="mbr.mbrId"
                     className="input-style01"
-                    style={{ width: "550px" }}
+                    style={{ width: '550px' }}
                   />
                   <span className="error-msg"></span>
                   <Comment>6~15자 영문, 숫자 조합</Comment>
@@ -110,7 +110,7 @@ function SignupForm() {
                     id="mbrPw"
                     name="mbr.mbrPw"
                     className="input-style01"
-                    style={{ width: "550px" }}
+                    style={{ width: '550px' }}
                   />
                   <span className="error-msg"></span>
                   <Comment>
@@ -128,7 +128,7 @@ function SignupForm() {
                     type="password"
                     id="mbrCheckPw"
                     className="input-style01"
-                    style={{ width: "550px" }}
+                    style={{ width: '550px' }}
                   />
                   <span className="error-msg"></span>
                 </Td>
@@ -145,7 +145,7 @@ function SignupForm() {
                     className="input-style01"
                     title="이메일 아이디 입력"
                     value=""
-                    style={{ width: "208px" }}
+                    style={{ width: '208px' }}
                   />
                   <At>@</At>
                   <InputStyle01
@@ -153,13 +153,13 @@ function SignupForm() {
                     id="mbrEmailDomain"
                     className="input-style01"
                     title="이메일 도메인 주소 직접 입력"
-                    style={{ width: "152px" }}
+                    style={{ width: '152px' }}
                   />
                   <SelectStyle01 title="이메일 도메인 주소 선택창">
                     <SelectStyle01Button
                       type="button"
                       className="d_select_sel"
-                      style={{ width: "152px" }}
+                      style={{ width: '152px' }}
                       id="emailDefaultDomain"
                     >
                       <span>직접입력</span>
@@ -241,7 +241,7 @@ function SignupForm() {
           >
             <BtnEasyJoinSpan>카카오로 가입</BtnEasyJoinSpan>
           </Kakao>
-          <a id="kakao-join-btn" style={{ display: "none" }}></a>
+          <a id="kakao-join-btn" style={{ display: 'none' }}></a>
         </BtnEasyJoin>
       </SignEasy>
       {/* =====간편 회원가입 end===== */}
@@ -382,7 +382,7 @@ const InputStyle01 = styled.input`
   color: #000;
   border: 1px solid #ddd;
   vertical-align: middle;
-  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif !important;
 `;
 const Comment = styled.p`
   margin-top: 8px;
@@ -427,116 +427,8 @@ const SelectStyle01Li = styled.li`
 `;
 
 /* =====이용약관 start===== */
-const Togbox = styled.div`
-  min-height: 30px;
-  margin: 50px 0;
-`;
-
-const Hbox = styled.div`
-  padding: 20px 0;
-  border-bottom: #000 solid 1px;
-`;
-
-const CheckSkin = styled.span`
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  overflow: hidden;
-`;
-
-const GrayLabel = styled.label`
-  width: auto;
-  color: #737373;
-  font-size: 13px;
-  font-weight: 100;
-  cursor: pointer;
-
-  inline-block;
-  margin-left: 5px;
-  color: #666;
-  vertical-align: -1px;
-  display: inline-block;
-  min-width: 160px;
-`;
-
-const ContentSpan = styled.span`
-  font-size: 12px;
-  line-height: 13px;
-  font-weight: 100;
-  color: #737373;
-`;
-
-const HboxLabel = styled.label`
-  min-width: 170px;
-  font-size: 14px;
-  cursor: pointer;
-  padding-right: 22px;
-`;
-
-const BtnOpen = styled.button`
-  top: 10px;
-  width: 30px;
-  height: 30px;
-  background: url(../images/common/bg_select_open.png) no-repeat 50%;
-  background-image: url(../images/common/bg_select_close.png);
-  text-indent: -9999px;
-  overflow: hidden;
-  position: absolute;
-  right: -7px;
-`;
-
-const CboxDtoggleCont = styled.div`
-  display: block;
-`;
-
-const TogboxList = styled.li`
-  border-bottom: #dddddd solid 1px;
-  padding: 20px 0;
-  position: relative;
-
-  list-style: none;
-  border: none;
-  display: flex;
-`;
-
-const TitAtree = styled.div`
-  flex: 0 0 auto;
-  width: 200px;
-  font-size: 14px;
-  color: #000;
-`;
-
-const AgreeWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px 0;
-  flex: 1;
-`;
-
-const AgreeWrapItems = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const BoxItems = styled.div`
-  display: flex;
-  flex: 1 0 auto;
-`;
-
-const Item = styled.span`
-  margin-left: 0;
-`;
-
 const Required = styled.span`
   color: #ff3600 !important;
-`;
-
-const AgreeItems = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 /* =====회원가입 버튼 start===== */

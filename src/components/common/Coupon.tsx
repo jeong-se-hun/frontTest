@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 type CouponType = {
   amount: string | number;
@@ -21,8 +21,8 @@ function Coupon({ amount, title }: CouponType) {
 }
 
 Coupon.defaultProps = {
-  amount: "10,000 M",
-  title: "신규가입 시\n 마일리지 지급",
+  amount: '10,000 M',
+  title: '신규가입 시\n 마일리지 지급',
 };
 
 const ListBnfUl = styled.ul`

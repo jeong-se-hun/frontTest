@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 type ButtonType = {
   color?: string;
@@ -7,12 +7,17 @@ type ButtonType = {
   height?: string;
   border?: string;
   children?: string;
+  onClick?: () => void;
 };
 
 interface ButtonProps extends ButtonType {}
 
-function Button({ children, ...rest }: ButtonProps) {
-  return <StyledButton {...rest}>{children}</StyledButton>;
+function Button({ children, onClick, ...rest }: ButtonProps) {
+  return (
+    <StyledButton onClick={onClick} {...rest}>
+      {children}
+    </StyledButton>
+  );
 }
 
 const StyledButton = styled.button<ButtonType>`
