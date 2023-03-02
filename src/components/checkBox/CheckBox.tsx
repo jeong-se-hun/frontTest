@@ -1,11 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-type CheckBoxType = {
-  label: string;
-  props: string;
-};
-
 type DataType = {
   id: number;
   title: string;
@@ -16,8 +11,11 @@ export default function CheckBox(): JSX.Element {
     { id: 0, title: "(필수) 이용약관에 대한 동의" },
     { id: 1, title: "(필수) 개인정보 수집 및 이용에 대한 동의" },
     { id: 2, title: "(필수) 본인인증을 위한 개인정보 이용 동의" },
-    /*     { id: 3, title: "(선택) E-mail 수신 동의" },
-    { id: 4, title: "(선택) SNS (알림톡) 수신 동의" }, */
+  ];
+
+  const selectData: DataType[] = [
+    { id: 3, title: "(선택) E-mail 수신 동의" },
+    { id: 4, title: "(선택) SNS (알림톡) 수신 동의" },
   ];
 
   // 체크된 아이템을 담을 배열
@@ -41,6 +39,7 @@ export default function CheckBox(): JSX.Element {
       // 전체 선택 클릭 시 데이터의 모든 id를 담은 배열로 checkItems 상태 업데이트
       const idArray: number[] = [];
       data.forEach((el) => idArray.push(el.id));
+      selectData.forEach((el) => idArray.push(el.id)); /* =====새로 추가===== */
       setCheckItems(idArray);
     } else {
       // 전체 선택 해제 시 checkItems 를 빈 배열로 상태 업데이트
@@ -59,21 +58,25 @@ export default function CheckBox(): JSX.Element {
               handleAllCheck(e.target.checked);
             }}
             // 데이터 개수와 체크된 아이템의 개수가 다를 경우 선택 해제 (하나라도 해제 시 선택 해제)
-            checked={checkItems.length === data.length ? true : false}
+            checked={
+              checkItems.length === data.length + selectData.length
+                ? true
+                : false
+            }
           />
           <label className="second-row">
             이용약관 및 개인정보 수집 전체 동의
           </label>
         </HeaderSpan>
-        <ShowContents></ShowContents>
       </HeaderDiv>
 
+      {/* =============================== 필수사항 =============================== */}
       <BodyDiv>
         <BodyLi>
           <TitleTerms>이용약관</TitleTerms>
-          {data?.map((data: DataType, key: number) => (
-            <RequiredTerms key={key}>
-              <RequiredTermsWrap>
+          <RequiredTermsWrap>
+            {data?.map((data: DataType, key: number) => (
+              <RequiredTerms key={key}>
                 <RequiredTermsBoxItems>
                   <RequiredTermsItems>
                     <input
@@ -85,15 +88,39 @@ export default function CheckBox(): JSX.Element {
                       // 체크된 아이템 배열에 해당 아이템이 있을 경우 선택 활성화, 아닐 시 해제
                       checked={checkItems.includes(data.id) ? true : false}
                     />
+                    <TitleLabel className="second-row">{data.title}</TitleLabel>
                   </RequiredTermsItems>
+                  <ShowContentsSpan>내용보기</ShowContentsSpan>
                 </RequiredTermsBoxItems>
-              </RequiredTermsWrap>
-              <label className="second-row">{data.title}</label>
-              <ShowContentsSpan>
-                <span>내용보기</span>
-              </ShowContentsSpan>
-            </RequiredTerms>
-          ))}
+              </RequiredTerms>
+            ))}
+          </RequiredTermsWrap>
+        </BodyLi>
+
+        {/* =============================== 선택사항 =============================== */}
+        <BodyLi>
+          <TitleTerms>마케팅정보 수신</TitleTerms>
+          <RequiredTermsWrap>
+            {selectData?.map((data: DataType, key: number) => (
+              <RequiredTerms key={key}>
+                <RequiredTermsBoxItems>
+                  <RequiredTermsItems>
+                    <input
+                      type="checkbox"
+                      name={`select-${data.id}`}
+                      onChange={(e) =>
+                        handleSingleCheck(e.target.checked, data.id)
+                      }
+                      // 체크된 아이템 배열에 해당 아이템이 있을 경우 선택 활성화, 아닐 시 해제
+                      checked={checkItems.includes(data.id) ? true : false}
+                    />
+                    <TitleLabel className="second-row">{data.title}</TitleLabel>
+                  </RequiredTermsItems>
+                  <ShowContentsSpan>내용보기</ShowContentsSpan>
+                </RequiredTermsBoxItems>
+              </RequiredTerms>
+            ))}
+          </RequiredTermsWrap>
         </BodyLi>
       </BodyDiv>
     </ParentDiv>
@@ -162,7 +189,14 @@ const RequiredTermsItems = styled.span`
   margin-left: 0;
 `;
 
-const ShowContents = styled.a``;
+const TitleLabel = styled.label`
+  width: auto;
+  min-width: 0;
+  color: #737373;
+  font-size: 13px;
+  font-weight: 100;
+  cursor: pointer;
+`;
 
 const ShowContentsSpan = styled.span`
   font-size: 12px;
