@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Image from 'next/image';
 import ico_search from '/public/images/common/ico_search.png';
@@ -8,10 +9,16 @@ import ico_bag from '/public/images/common/ico_bag.png';
 
 import Modal from '../searchModal/Modal';
 import UtilMyMenuBox from './UtilMyMenuBox';
+import Link from 'next/link';
 
 function UtilMenu() {
   const [modal, setModal] = useState(false);
   const [myMenuChecked, setMyMenuChecked] = useState(false);
+
+  const router = useRouter();
+  useEffect(() => {
+    setMyMenuChecked(false);
+  }, [router.asPath]);
 
   const onOpen = () => setModal(true);
   const onClose = () => setModal(false);
@@ -33,7 +40,9 @@ function UtilMenu() {
         </UtilItem>
         <UtilItem>
           <button>
-            <Image src={ico_bag} alt="bag icon"></Image>
+            <Link href={'/cart_page'}>
+              <Image src={ico_bag} alt="bag icon"></Image>
+            </Link>
           </button>
         </UtilItem>
       </UtilMenuWrap>

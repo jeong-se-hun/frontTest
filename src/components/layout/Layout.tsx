@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 import styled from 'styled-components';
 import Header from '../header/Header';
@@ -17,10 +18,12 @@ function Layout(props: layoutPropsType) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <script defer src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
-        <script defer src="https://developers.kakao.com/sdk/js/kakao.js"></script>
       </Head>
+      {/* <Script defer src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></Script>
+      <Script defer src="https://developers.kakao.com/sdk/js/kakao.js"></Script> */}
       <Header />
+      <script defer src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
+      <script defer src="https://developers.kakao.com/sdk/js/kakao.js"></script>
       <main>{props.children}</main>
     </LayoutWrap>
   );

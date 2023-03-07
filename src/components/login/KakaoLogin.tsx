@@ -2,12 +2,18 @@ import styled from 'styled-components';
 import Router from 'next/router';
 import Image from 'next/image';
 import kakaoLoginIcon from '/public/images/common/kakao_login_medium_narrow.png';
+import axios from 'axios';
 
 const kakaoInit = () => {
   const kakao = (window as any).Kakao;
-  if (!kakao.isInitialized()) kakao.init('7c7d891609400a77093ab0fe9024e15b');
+  if (!kakao.isInitialized()) kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
 
   return kakao;
+};
+
+const genderMap: { [key: string]: string } = {
+  male: 'M',
+  female: 'F',
 };
 
 export default function KakaoLogin() {
@@ -20,10 +26,34 @@ export default function KakaoLogin() {
       success: () => {
         kakao.API.request({
           url: '/v2/user/me', // 사용자 정보 가져오기
-          success: (res: any) => {
-            // 로그인 성공할 경우 정보 확인 후 /kakao 페이지로 push
-            console.log(res);
-            Router.push('/');
+
+          success: async (res: any) => {
+            if (
+              !res.kakao_account.email ||
+              res.kakao_account.email === '' ||
+              !res.kakao_account.age_range ||
+              !res.kakao_account.birthday ||
+              !res.kakao_account.gender
+            ) {
+              alert('이메일, 성별, 연령대, 생일을 필수로 동의해 주셔야 가입이 진행됩니다.');
+              kakao.API.request({
+                url: '/v1/user/unlink',
+              });
+            } else {
+              await axios
+                .post('/api/login', {
+                  id: res.id,
+                  email: res.kakao_account.email,
+                  age: res.kakao_account.age_range.replace(/~/g, '-'),
+                  birthday: res.kakao_account.birthday.replace(/(\d{2})(\d{2})/, '$1-$2'),
+                  gender: genderMap[res.kakao_account.gender],
+                  name: res.kakao_account.profile.nickname,
+                })
+                .then(({ data }) => {
+                  if (data.success) Router.push('/');
+                  else return alert(' 로그인에 실패하였습니다.');
+                });
+            }
           },
           fail: (error: any) => {
             console.log(error);

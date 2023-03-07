@@ -3,6 +3,7 @@ import Coupon from '../common/Coupon';
 import Button2 from '../common/Button2';
 import NaverLogin from './NaverLogin';
 import KakaoLogin from './KakaoLogin';
+import { useEffect } from 'react';
 
 export default function Member() {
   return (

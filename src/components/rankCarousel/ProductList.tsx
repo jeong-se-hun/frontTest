@@ -11,13 +11,13 @@ export default function ProductList({ select }: ProductListProps) {
   return (
     <ProductListContainer>
       {/* @ts-ignore */}
-      <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
-        {items
+      {/*    <Carousel itemsToShow={4} itemsToScroll={4} pagination={false}>
+       {items
           .filter(item => item.category === select)
           .map((data, i) => (
             <ProductItem key={i} {...data} />
-          ))}
-      </Carousel>
+          ))} 
+      </Carousel>*/}
     </ProductListContainer>
   );
 }

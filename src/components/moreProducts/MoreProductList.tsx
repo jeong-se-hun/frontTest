@@ -1,7 +1,7 @@
-import items from "../../../public/data/Item.json";
-import ProductItem from "../rankCarousel/ProductItem";
-import styled from "styled-components";
-import { useEffect, useState } from "react";
+import items from '../../../public/data/Item.json';
+import ProductItem from '../rankCarousel/ProductItem';
+import styled from 'styled-components';
+import { useEffect, useState } from 'react';
 
 type Test = {
   category: string;
@@ -16,13 +16,13 @@ export default function MoreProductList() {
   const [productData, setProductData] = useState<Test[]>([]);
 
   useEffect(() => {
-    let addProduct = productData.concat(items.slice(8 * cnt, 8 * (cnt + 1)));
-    setProductData(addProduct);
+    // let addProduct = productData.concat(items.slice(8 * cnt, 8 * (cnt + 1)));
+    // setProductData(addProduct);
   }, [cnt]);
 
   return (
     <>
-      {productData.map((item) => (
+      {productData.map(item => (
         <ProductItem key={item.title} {...item} />
       ))}
       <MoreButton onClick={() => setCnt(cnt + 1)}>상품 더보기 +</MoreButton>
