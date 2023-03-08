@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import Link from "next/link";
-import Image from "next/image";
+import styled from 'styled-components';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface HotItemProps {
   title: string;
@@ -52,6 +52,6 @@ const Price = styled.em`
   margin-top: 8px;
   color: #858585;
   font-size: 12px;
-  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
   font-weight: 400;
 `;

@@ -1,13 +1,13 @@
 import Link from 'next/link';
+import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 type MenuItemType = {
-  children: string | number;
   link?: string;
-  type?: string;
+  readonly type?: string;
 };
 
-function MenuItem({ children, link = '/', type = 'main' }: MenuItemType) {
+function MenuItem({ children, link = '/', type = 'main' }: PropsWithChildren<MenuItemType>) {
   return (
     <>
       <MenuItemWrap type={type}>

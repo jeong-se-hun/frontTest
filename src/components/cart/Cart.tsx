@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loginAction, logoutAction } from '../../../store/modules/user';
 import styled from 'styled-components';
-
+import { InitialStateType } from '../../constants/index';
 const cartItems = [
   {
     id: 1,
@@ -42,18 +44,13 @@ const cartItems = [
   },
 ];
 
-type userInfoType = {
-  name: string;
-  age: string;
-  email: string;
-  gender: string;
-  birthday: string;
-};
-
 const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState<userInfoType>();
+
   const router = useRouter();
+
+  const dispatch = useDispatch();
+  const userState = useSelector((state: { user: InitialStateType }) => state.user);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -62,23 +59,27 @@ const Cart = () => {
 
         if (!res.data) {
           alert('유저 정보를 확인할 수 없습니다. 다시 로그인해 주세요.');
+          dispatch(logoutAction());
           router.push('/login');
         }
 
         setIsLoading(true);
-        setUserInfo(res.data);
+        console.log('리스폰스 데이터');
+        console.log(res.data);
+        dispatch(loginAction(res.data));
       } catch (error) {
         console.log(error);
         alert('로그인 후 이용 가능합니다.');
+        dispatch(logoutAction());
         router.push('/login');
       }
     };
     checkAuth();
-  }, [router]);
+  }, [dispatch, router]);
 
   return (
     <>
-      {isLoading && userInfo && (
+      {isLoading && userState.user && (
         <Container>
           <Title>Shopping Cart</Title>
           <UserCard>
@@ -86,23 +87,23 @@ const Cart = () => {
             <CardInfo>
               <div>
                 <CardLabel>Name:</CardLabel>
-                <CardValue>{userInfo.name}</CardValue>
+                <CardValue>{userState.user.name}</CardValue>
               </div>
               <div>
                 <CardLabel>Email:</CardLabel>
-                <CardValue>{userInfo.email}</CardValue>
+                <CardValue>{userState.user.email}</CardValue>
               </div>
               <div>
                 <CardLabel>Age:</CardLabel>
-                <CardValue>{userInfo.age}</CardValue>
+                <CardValue>{userState.user.age}</CardValue>
               </div>
               <div>
                 <CardLabel>Gender:</CardLabel>
-                <CardValue>{userInfo.gender}</CardValue>
+                <CardValue>{userState.user.gender}</CardValue>
               </div>
               <div>
                 <CardLabel>Birthday:</CardLabel>
-                <CardValue>{userInfo.birthday}</CardValue>
+                <CardValue>{userState.user.birthday}</CardValue>
               </div>
             </CardInfo>
           </UserCard>

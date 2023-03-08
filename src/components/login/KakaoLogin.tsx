@@ -50,8 +50,9 @@ export default function KakaoLogin() {
                   name: res.kakao_account.profile.nickname,
                 })
                 .then(({ data }) => {
-                  if (data.success) Router.push('/');
-                  else return alert(' 로그인에 실패하였습니다.');
+                  if (data.success) {
+                    Router.push('/');
+                  } else return alert(' 로그인에 실패하였습니다.');
                 });
             }
           },

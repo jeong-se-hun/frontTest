@@ -40,7 +40,7 @@ function UtilMenu() {
         </UtilItem>
         <UtilItem>
           <button>
-            <Link href={'/cart_page'}>
+            <Link href={'/cart-page'}>
               <Image src={ico_bag} alt="bag icon"></Image>
             </Link>
           </button>
