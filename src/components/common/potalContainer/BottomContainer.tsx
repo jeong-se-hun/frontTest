@@ -11,7 +11,7 @@ export function Backdrop({ onClick }: IContainer) {
   return <BackdropWrap onClick={onClick} />;
 }
 
-const OverlayContainer = ({
+export const OverlayContainer = ({
   children,
   onClick,
 }: PropsWithChildren<IContainer>) => {

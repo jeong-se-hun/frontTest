@@ -1,7 +1,11 @@
 import React from "react";
 import Flag from "../../components/common/flag/Flag";
 import styled from "styled-components";
-import BottomContainer from "@/components/common/potalContainer/BottomContainer";
+import {
+  Backdrop,
+  OverlayContainer,
+} from "@/components/common/potalContainer/BottomContainer";
+import TestBox from "@/components/common/potalContainer/TestBox";
 
 const Test = () => {
   return (
@@ -32,7 +36,14 @@ const Test = () => {
       <p>Flag c</p>
       <Flag flagSeriesType="flagC">일시 품절asd</Flag>
       <div />
-      <BottomContainer />
+      <Backdrop onClick={() => alert("Remove dimmed layer")} />
+      <OverlayContainer
+        onClick={() => {
+          console.log("hi");
+        }}
+      >
+        <TestBox />
+      </OverlayContainer>
     </Container>
   );
 };
